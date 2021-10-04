@@ -1,26 +1,33 @@
-/* C++ Program to check whether a String is Palindrome or not  */
-
 #include<iostream>
+#include<string.h>
 using namespace std;
 
 int main()
 {
-    int i,j,len,flag=1;
-    char a[20];
-    cout<<"\nEnter any string :: ";
-    cin>>a;
-
-    for(len=0;a[len]!='\0';++len);
-        for(i=0,j=len-1;i<len/2;++i,--j)
-        {
-            if(a[j]!=a[i])
-                flag=0;
-        }
-
-    if(flag==1)
-        cout<<"\nThe Entered String [ "<<a<<" ] is Palindrome.\n";
-    else
-        cout<<"\nThe Entered String [ "<<a<<" ] is NOT Palindrome.\n";
-
-    return 0;
+   char a[100],b[100];
+   int i,l;
+   
+   cout<<"Enter String : ";
+   gets(a);
+   
+  for(i=0; a[i]!=NULL; i++)
+  {
+  	  b[i] = a[i];
+  }
+   
+   strrev(b);
+   
+   cout<<b<<endl;
+   
+   if(strcmp(a,b) == 0)
+   {
+   	  cout<<"\nPalindrome";
+   }
+   else
+   {
+   	  cout<<"\nnot Palindrome";
+   }
+   	
+   	
+	
 }
